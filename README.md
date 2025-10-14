@@ -14,8 +14,3 @@ figma.com/design/FifMfKSkth0KyD3vssN3Db/Movie-Watchlist--Copy-?node-id=0-1&t=ISy
 API page
 https://www.omdbapi.com/
 
-Key
-f6f4671c
-
-
-http://www.omdbapi.com/?i=tt3896198&apikey=f6f4671c
