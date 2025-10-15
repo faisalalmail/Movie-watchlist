@@ -85,3 +85,71 @@ main{
     align-self: center;
 }
 
+.movie-list{
+    padding: 3rem 3rem 0 3rem;
+    margin: auto;
+    margin-top: 0;
+}
+
+.movie{
+    display: flex;
+
+}
+
+.movie-poster{
+    height: 12rem;
+    aspect-ratio: 2/3;
+}
+
+.movie-details{
+    margin: 2rem 0 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.movie-title{
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.movie-info{
+    gap: 1rem;
+    font-size: 0.75rem;
+}
+
+hr{
+    margin: 1rem 0 1rem 0;
+    height: 0;
+    border: 1.5px solid #E5E7EB;
+
+}
+
+.poster{
+    width: 100%;
+}
+
+.movie-plot
+{
+
+    color: #6B7280;
+    line-height: 20px;
+}
+
+.flex{
+    display: flex;
+}
+
+.add{
+
+    display: flex;
+    gap: 0.2rem;
+}
+
+.info1{
+    gap:0.5rem;
+}
+
+.rating{
+    font-size: 12px;
+}
