@@ -9,7 +9,7 @@ search()
 })
 
 function search(){
- fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=f6f4671c&s=${searchTerm.value}`)
+ fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=f6f4671c&t=${searchTerm.value}`)
  .then(res => res.json())
  .then(data => console.log(data))
 }
