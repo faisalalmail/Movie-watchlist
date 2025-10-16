@@ -8,6 +8,8 @@
 }
 
 body{
+    display: flex;
+  flex-direction: column;
     height: 100vh;
 }
 
@@ -16,6 +18,7 @@ header{
     background-size: 150%;
     background-position: 50% 60%;
     height: 200px;
+    min-height: 200px;
     background-blend-mode:exclusion;
     background-color: black;
     color: white;
@@ -72,21 +75,34 @@ button{
 
 main{
     display: flex;
-    height: 100%;
+    flex-grow: 1;
 
 }
 
 .empty{
-    font-size: 1.2rem;
+      display: flex;
+      flex-direction: column;
+    justify-content: center;
+    font-size: 1.5rem;
+    gap:1rem;
     font-weight: bold;
-    display: block;
     margin: auto;
     color: #DFDDDD;
+    max-width: 25rem;
+    text-align: center;
+    
+
+}
+.empty img{
+    width: 60%;
     align-self: center;
 }
 
+
 .movie-list{
-    padding: 3rem 3rem 0 3rem;
+    display: none; /* default is none until search results populated */
+
+    padding: 3rem 3rem 3rem 3rem;
     margin: auto;
     margin-top: 0;
 }
