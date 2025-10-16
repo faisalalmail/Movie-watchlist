@@ -27,6 +27,8 @@ header{
 h1{
     
     font-size: 3rem;
+    margin: 0;
+    text-align: center;
 }
 
 
@@ -35,8 +37,21 @@ h1{
     position: relative;
     background-color: rgba(0,0,0,0.8);
     height: 100%; /* reference to the header height */
-    padding: 2rem;
+    padding: 3rem;
+    display: flex;
+    justify-content: space-between;
+    
 
+}
+
+.link{
+    text-align: center;
+    align-self: center;
+    height: fit-content;
+}
+.link:hover{
+    cursor: pointer;
+    color: #D1D5DB;
 }
 
 form{
@@ -168,4 +183,17 @@ hr{
 
 .rating{
     font-size: 12px;
+}
+
+footer{
+    background-color: darkgray;
+    color: white;
+    padding: 1rem;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+footer a{
+    color:lightblue;
+    text-decoration: none;
 }
