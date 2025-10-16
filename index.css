@@ -54,9 +54,7 @@ h1{
     color: #D1D5DB;
 }
 
-.link a{
-    color: inherit;
-}
+
 
 form{
     display: flex;
@@ -94,6 +92,7 @@ button{
 
 main{
     display: flex;
+    flex-direction: column;
     flex-grow: 1;
 
 }
@@ -117,6 +116,24 @@ main{
     align-self: center;
 }
 
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.lets-add{
+    color: black;
+    font-size: 14px;
+ 
+    
+}
+
+.lets-add img{
+height: 18px;
+width: 18px;
+margin-right: 0.5rem;
+
+}
 
 .movie-list{
     display: none; /* default is none until search results populated */
@@ -181,6 +198,10 @@ hr{
     gap: 0.2rem;
 }
 
+.add:hover{
+    cursor: pointer;
+}
+
 .info1{
     gap:0.5rem;
 }
@@ -199,5 +220,4 @@ footer{
 
 footer a{
     color:lightblue;
-    text-decoration: none;
 }

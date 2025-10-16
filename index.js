@@ -1,3 +1,5 @@
+
+
 const form = document.getElementById("search-form")
 const searchTerm = document.getElementById("search-term")
 const dummyMovies= [{
@@ -384,6 +386,13 @@ function populateList(list){
 }
 
 
+
+
+///////
+
+let myList = []
+
 function addToWatchList(movieId){
-    console.log(movieId)
+    myList.push(movieId)
+    localStorage.setItem("myMovieList",JSON.stringify(myList))
 }
