@@ -1,7 +1,7 @@
 console.log("loaded")
 let moviesFromStorage = JSON.parse(localStorage.getItem("myMovieList"))
 
-console.log(moviesFromStorage.length)
+console.log(moviesFromStorage)
 
 if(moviesFromStorage.length > 0){
     getMovies(moviesFromStorage)
@@ -27,7 +27,7 @@ async function getMovies(list) {
     // Filter out failed responses
     const validMovies = detailedList.filter(movie => movie.Response == "True" && movie.Actors !== "N/A");
     
-    if (validMovies.length > 1){
+    if (validMovies.length > 0){
     populateList(validMovies);
     } else {
         document.getElementById("empty").innerHTML = "Unable to find what you're looking for. Please try another search."
@@ -61,7 +61,7 @@ function populateList(list){
             <div class="movie-info flex">
                 <div class="duration"><p>${list[i].Runtime}</p></div>
                 <div class="genre"><p>${list[i].Genre}</p></div>
-                     <div class="add" onclick="addToWatchList('${list[i].imdbID}')"><img src="images/add.svg" class=""> Watchlist</div></div>
+                     <div class="add" onclick="removeFromList('${list[i].imdbID}')"><img src="images/remove.svg" class=""> Remove</div></div>
             <div class="movie-plot">${list[i].Plot}</div>
         </div>
     </div>
@@ -81,7 +81,7 @@ function populateList(list){
             <div class="movie-info flex">
                 <div class="duration"><p>${list[list.length-1].Runtime}</p></div>
                 <div class="genre"><p>${list[list.length-1].Genre}</p></div>
-                     <div class="add" onclick="addToWatchList('${list[list.length-1].imdbID}')"><img src="images/add.svg" class=""> Watchlist</div></div>
+                     <div class="add" onclick="removeFromList('${list[list.length-1].imdbID}')"><img src="images/Remove.svg" class=""> Remove</div></div>
             <div class="movie-plot">${list[list.length-1].Plot}</div>
         </div>
     </div>
@@ -90,6 +90,11 @@ function populateList(list){
 }
 
 function removeFromList(movieID){
-    
+    console.log(movieID)
+    let newList = moviesFromStorage.filter((movie) => movie !== movieID)
+    console.log(newList)
+    localStorage.setItem("myMovieList",JSON.stringify(newList))
+
+
 
 }

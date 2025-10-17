@@ -390,7 +390,7 @@ function populateList(list){
 
 ///////
 
-let myList = []
+let myList = JSON.parse(localStorage.getItem("myMovieList"))
 
 function addToWatchList(movieId){
     myList.push(movieId)
