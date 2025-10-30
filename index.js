@@ -390,9 +390,17 @@ function populateList(list){
 
 ///////
 
-let myList = JSON.parse(localStorage.getItem("myMovieList"))
+let myList = []
+
+if(JSON.parse(localStorage.getItem("myMovieList")) != null){
+    myList = JSON.parse(localStorage.getItem("myMovieList"))
+}
+
+/* myList = JSON.parse(localStorage.getItem("myMovieList"))
+console.log("list is" + myList) */
 
 function addToWatchList(movieId){
+    console.log("adding movie" +movieId)
     myList.push(movieId)
     localStorage.setItem("myMovieList",JSON.stringify(myList))
 }

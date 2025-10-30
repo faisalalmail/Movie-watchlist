@@ -90,10 +90,11 @@ function populateList(list){
 }
 
 function removeFromList(movieID){
-    console.log(movieID)
+    //console.log(movieID)
     let newList = moviesFromStorage.filter((movie) => movie !== movieID)
-    console.log(newList)
+    //console.log(newList)
     localStorage.setItem("myMovieList",JSON.stringify(newList))
+     window.location.reload();
 
 
 
